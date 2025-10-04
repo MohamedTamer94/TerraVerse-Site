@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra Verse - NASA Terra Satellite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav>
+    <div class="container nav-container">
+        <a href="#" class="logo">
+            <i class="fas fa-satellite"></i>
+            Terra Verse
+        </a>
+        <button class="mobile-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Terra</a></li>
+            <li><a href="#chapters">Video Chapters</a></li>
+            <li><a href="#data">Data Insights</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#cta">Learn More</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Explore Earth with Terra Verse</h1>
+            <p>A journey through NASA's Terra satellite and its discoveries about our changing planet.</p>
+            <div class="hero-btns">
+                <a href="#verse1" class="btn">Start the Journey</a>
+                <a href="#about" class="btn btn-outline">Learn About Terra</a>
+            </div>
+        </div>
+    </div>
+    <div id="earth-container"></div>
+    <div class="loading">Loading realistic Earth model...</div>
+    <div class="controls-info">
+        <div>Drag to rotate • Scroll to zoom</div>
+    </div>
+</section>
+
+<!-- About Terra -->
+<section class="about-section" id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>About Terra</h2>
+            <p>NASA's Terra satellite is a flagship Earth observing platform that has been monitoring our planet for over two decades.</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Understanding Our Changing Planet</h3>
+                <p>Launched in 1999, Terra was the first satellite to monitor Earth's systems with five sophisticated instruments, providing unprecedented data about our planet's climate and environment.</p>
+                <p>Terra's comprehensive observations help scientists understand how Earth's atmosphere, land, and oceans interact as a system, providing critical data for climate research and environmental management.</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>1999 - Launch</h4>
+                        <p>Terra satellite launched from Vandenberg Air Force Base, beginning its mission to observe Earth's systems</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2000 - First Data</h4>
+                        <p>Began transmitting comprehensive Earth observation data from its five advanced instruments</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2002 - Climate Records</h4>
+                        <p>Established baseline measurements for climate change studies that continue to this day</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2020 - Extended Mission</h4>
+                        <p>Mission extended due to continued scientific value and ongoing contributions to Earth science</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="satellite-illustration">
+                    <div class="solar-panel"></div>
+                    <div class="satellite-body"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Chapters -->
+<section class="video-chapters" id="chapters">
+    <div class="progress-container">
+        <div class="progress-line"></div>
+        <div class="progress-dot active" data-title="Atmosphere" data-target="verse1"></div>
+        <div class="progress-dot" data-title="Land Surface" data-target="verse2"></div>
+        <div class="progress-dot" data-title="Oceans" data-target="verse3"></div>
+        <div class="progress-dot" data-title="Cryosphere" data-target="verse4"></div>
+        <div class="progress-dot" data-title="Human Impact" data-target="verse5"></div>
+    </div>
+
+    <div class="chapter" id="verse1">
+        <div class="container">
+            <div class="chapter-content">
+                <div class="chapter-video">
+                    <div class="video-placeholder">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <h3>Verse 1: Atmosphere</h3>
+                        <p>2-minute animation • Click to play</p>
+                    </div>
+                </div>
+                <div class="chapter-text">
+                    <h3>Atmosphere: Earth's Protective Shield</h3>
+                    <ul>
+                        <li>How Terra monitors atmospheric composition and pollutants</li>
+                        <li>Tracking greenhouse gases and their impact on climate</li>
+                        <li>Observing cloud formation and atmospheric dynamics</li>
+                        <li>Monitoring air quality and its effects on human health</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chapter" id="verse2">
+        <div class="container">
+            <div class="chapter-content">
+                <div class="chapter-text">
+                    <h3>Land Surface: Our Changing Landscapes</h3>
+                    <ul>
+                        <li>Monitoring deforestation and reforestation efforts</li>
+                        <li>Tracking urban expansion and land use changes</li>
+                        <li>Observing agricultural patterns and food security</li>
+                        <li>Detecting wildfires and their environmental impact</li>
+                    </ul>
+                </div>
+                <div class="chapter-video">
+                    <div class="video-placeholder">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <h3>Verse 2: Land Surface</h3>
+                        <p>2-minute animation • Click to play</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chapter" id="verse3">
+        <div class="container">
+            <div class="chapter-content">
+                <div class="chapter-video">
+                    <div class="video-placeholder">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <h3>Verse 3: Oceans</h3>
+                        <p>2-minute animation • Click to play</p>
+                    </div>
+                </div>
+                <div class="chapter-text">
+                    <h3>Oceans: The Blue Heart of Our Planet</h3>
+                    <ul>
+                        <li>Measuring sea surface temperatures and their changes</li>
+                        <li>Monitoring phytoplankton blooms and marine ecosystems</li>
+                        <li>Tracking ocean currents and their climate influence</li>
+                        <li>Observing sea level rise and coastal impacts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chapter" id="verse4">
+        <div class="container">
+            <div class="chapter-content">
+                <div class="chapter-text">
+                    <h3>Cryosphere: Earth's Frozen Regions</h3>
+                    <ul>
+                        <li>Tracking polar ice melt and its global implications</li>
+                        <li>Monitoring glacier retreat and mountain snowpack</li>
+                        <li>Observing permafrost changes and greenhouse gas release</li>
+                        <li>Studying sea ice dynamics and polar ecosystems</li>
+                    </ul>
+                </div>
+                <div class="chapter-video">
+                    <div class="video-placeholder">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <h3>Verse 4: Cryosphere</h3>
+                        <p>2-minute animation • Click to play</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chapter" id="verse5">
+        <div class="container">
+            <div class="chapter-content">
+                <div class="chapter-video">
+                    <div class="video-placeholder">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <h3>Verse 5: Human Impact</h3>
+                        <p>2-minute animation • Click to play</p>
+                    </div>
+                </div>
+                <div class="chapter-text">
+                    <h3>Human Impact: Our Footprint on Earth</h3>
+                    <ul>
+                        <li>Measuring urbanization and its environmental effects</li>
+                        <li>Tracking pollution sources and their dispersion</li>
+                        <li>Monitoring resource extraction and land degradation</li>
+                        <li>Assessing climate change mitigation efforts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Data Section -->
+<section class="data-section" id="data">
+    <div class="container">
+        <div class="section-title">
+            <h2>Data Insights</h2>
+            <p>Explore simplified visualizations of Terra's key Earth observation data.</p>
+        </div>
+
+        <div class="data-tabs">
+            <button class="tab-btn active" data-tab="temperature">Temperature</button>
+            <button class="tab-btn" data-tab="forest">Forest Cover</button>
+            <button class="tab-btn" data-tab="carbon">Carbon Emissions</button>
+        </div>
+
+        <div class="tab-content active" id="temperature-tab">
+            <div class="data-visualization">
+                <h3>Global Temperature Changes (2000-2023)</h3>
+                <div class="chart-container">
+                    <div class="chart" id="temperature-chart">
+                        <!-- Chart bars will be generated by JavaScript -->
+                    </div>
+                </div>
+                <p>Data shows the progressive increase in global average temperatures over the past two decades, with notable acceleration in recent years.</p>
+            </div>
+        </div>
+
+        <div class="tab-content" id="forest-tab">
+            <div class="data-visualization">
+                <h3>Forest Cover Changes</h3>
+                <div class="chart-container">
+                    <div class="chart" id="forest-chart">
+                        <!-- Chart bars will be generated by JavaScript -->
+                    </div>
+                </div>
+                <p>Monitoring deforestation and reforestation efforts worldwide helps track progress toward global conservation goals.</p>
+            </div>
+        </div>
+
+        <div class="tab-content" id="carbon-tab">
+            <div class="data-visualization">
+                <h3>Global Carbon Dioxide Levels</h3>
+                <div class="map-container">
+                    <div class="map-overlay"></div>
+                    <div class="map-legend">
+                        <div class="legend-item">
+                            <div class="legend-color temp-high"></div>
+                            <span>High CO2 Concentration</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color temp-medium"></div>
+                            <span>Medium CO2 Concentration</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color temp-low"></div>
+                            <span>Low CO2 Concentration</span>
+                        </div>
+                    </div>
+                </div>
+                <p>Terra's measurements help track carbon dioxide distribution and sources, crucial for understanding climate change drivers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits to Humanity -->
+<section class="benefits-section" id="benefits">
+    <div class="container">
+        <div class="section-title">
+            <h2>Benefits to Humanity</h2>
+            <p>Terra's data provides critical insights that benefit people and ecosystems worldwide.</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-temperature-high"></i>
+                </div>
+                <h3>Climate Tracking</h3>
+                <p>Monitor global temperature changes, sea level rise, and ice melt to understand and predict climate patterns.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h3>Disaster Prediction</h3>
+                <p>Track wildfires, floods, and storms to provide early warnings and improve emergency response.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3>Agriculture Improvement</h3>
+                <p>Monitor crop health, soil moisture, and growing conditions to support food security worldwide.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <h3>Water Resource Management</h3>
+                <p>Track freshwater resources, snowpack, and glacier changes to support sustainable water use.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <h3>Air Quality Monitoring</h3>
+                <p>Measure pollutants and aerosols to understand air quality impacts on human health and ecosystems.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-mountain"></i>
+                </div>
+                <h3>Ecosystem Conservation</h3>
+                <p>Monitor deforestation, biodiversity, and habitat changes to support conservation efforts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action / Closing Section -->
+<section class="cta-section" id="cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Together, we can understand and protect our planet.</h2>
+            <p>Access NASA's Terra satellite data and discover how it's helping scientists understand our changing planet.</p>
+            <a href="https://terra.nasa.gov" class="btn" target="_blank">Learn More on NASA's Terra</a>
+
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Terra Verse</h3>
+                <p>Exploring Earth through NASA's Terra satellite data to understand our changing planet.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Terra</a></li>
+                    <li><a href="#chapters">Video Chapters</a></li>
+                    <li><a href="#data">Data Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="https://terra.nasa.gov" target="_blank">NASA Terra Website</a></li>
+                    <li><a href="https://earthdata.nasa.gov" target="_blank">Earthdata</a></li>
+                    <li><a href="https://worldview.earthdata.nasa.gov" target="_blank">Worldview</a></li>
+                    <li><a href="https://climate.nasa.gov" target="_blank">NASA Climate</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:info@terraverse.example">info@terraverse.example</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Terra Verse. This is a demonstration website for educational purposes.</p>
+        </div>
+    </div>
+    <!-- Video Player Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-wrapper">
+                <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/index.js"></script>
+</body>
+</html>
